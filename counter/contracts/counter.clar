@@ -1,29 +1,10 @@
-;; title: counter
-;; version:
-;; summary:
-;; description:
+;; Multiplayer conract
+(define-map user-access principal uint)
 
-;; traits
-;;
+(define-read-only (get-count (user principal))
+	(default-to u0 (map-get? user-access user))
+)
 
-;; token definitions
-;;
-
-;; constants
-;;
-
-;; data vars
-;;
-
-;; data maps
-;;
-
-;; public functions
-;;
-
-;; read only functions
-;;
-
-;; private functions
-;;
-
+(define-public (increase)
+	(ok (map-set user-access tx-sender (+ u1 (get-count tx-sender))))
+)

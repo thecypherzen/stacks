@@ -5,8 +5,10 @@ authors = []
 telemetry = false
 cache_dir = './.cache'
 requirements = []
+
 [contracts.counter]
 path = 'contracts/counter.clar'
+
 clarity_version = 3
 epoch = 'latest'
 [repl.analysis]
