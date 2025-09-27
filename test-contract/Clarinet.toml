@@ -15,6 +15,7 @@ path = "contracts/maps.clar"
 [contracts.mapses]
 path = "contracts/secondmaps.clar"
 
+
 [repl.analysis]
 passes = ["check_checker"]
 check_checker = { trusted_sender = false, trusted_caller = false, callee_filter = false }
